@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+img{
+  max-width:100%
+}
+
+body{
+  font-family: "Nunito Sans", sans-serif;
+  padding:20px;
+  background-color:#202d36;
+  color:#fff;
+}
+body.light-theme{
+  background-color:white;
+  color:black;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:40px;
+}
+
+.grid.card-text{
+  background-color:#2b3743;
+  padding:25px;
+
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.filter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+}
+.filter.form-control{
+  width:100%;
+}
+
+.filter.form-control input{
+  background-color:transplant;
+  outline:none;
+  padding:8px;
+  border-radius:5px;
+  width:100%;
+}
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+@media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+  }
+@media (min-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+      }
+    }
+  
