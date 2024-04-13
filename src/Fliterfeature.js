@@ -22,41 +22,40 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
     if (region === 'Filter By Region') {
       setFilteredCountryList(countryList);
     } else {
-      const filteredCountries = countryList.filter(
-        (country) => country.region === region
-      );
+      const filteredCountries = countryList.filter((country) => country.region === region);
       setFilteredCountryList(filteredCountries);
     }
   };
 
   return (
     <div>
-      <section className='filter'>
-        <form className='form-control'>
+      <section className="filter">
+        <form className="form-control">
           <input
-            type='search'
-            name='search'
+            type="search"
+            name="search"
             value={searchQuery}
             onChange={handleSearch}
-            id='search'
-            placeholder='🔍Search for country'
+            id="search"
+            placeholder="🔍Search for country"
+            className="bg-white rounded-lg shadow-md p-2 w-full"
           />
         </form>
 
         <div>
           <select
-            name='select'
-            id='select'
-            className='select'
+            name="select"
+            id="select"
+            className="select bg-white rounded-lg shadow-md p-2"
             value={selectedRegion}
             onChange={handleRegionFilter}
           >
-            <option value='Filter By Region'>Filter by Region</option>
-            <option value='Asia'>Asia</option>
-            <option value='Europe'>Europe</option>
-            <option value='Americas'>Americas</option>
-            <option value='Africa'>Africa</option>
-            <option value='Oceania'>Oceania</option>
+            <option value="Filter By Region">Filter by Region</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Americas">Americas</option>
+            <option value="Africa">Africa</option>
+            <option value="Oceania">Oceania</option>
           </select>
         </div>
       </section>
@@ -64,5 +63,4 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
   );
 };
 
-export default FilterFeature;
-
+export default FilterFeature
