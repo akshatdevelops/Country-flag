@@ -2,6 +2,7 @@
 
 
 import React, { useState } from 'react';
+import { Menu } from '@headlessui/react';
 
 const FilterFeature = ({ countryList, setFilteredCountryList }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,20 +46,26 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
         </form>
 
         <div>
-          <select
-            name="select"
-            id="select"
-            className="select bg-white rounded-lg shadow-md p-2"
-            value={selectedRegion}
-            onChange={handleRegionFilter}
-          >
-            <option value="Filter By Region">Filter by Region</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Americas">Americas</option>
-            <option value="Africa">Africa</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+          <Menu as="div" className="relative">
+            <Menu.Button className="select bg-white rounded-lg shadow-md p-2">
+              Filter by Region
+            </Menu.Button>
+            <Menu.Items className="absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'Asia' } })}
+                  >
+                    Asia
+                  </button>
+                )}
+              </Menu.Item>
+        
+            </Menu.Items>
+          </Menu>
         </div>
       </section>
     </div>
