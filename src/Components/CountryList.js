@@ -13,13 +13,17 @@ const CountryList = ({ countryList }) => {
               <img src={flags.svg} alt={name.common} className="w-full h-40 object-cover" />
               <div className="p-4">
                 <h4 className="text-lg font-semibold">{name.common}</h4>
-                <h5>Population: {population}</h5>
-                <h5>Region: {region}</h5>
-                <h5>Capital: {capital}</h5>
-                <Link to={`/countries/${name.common}`} className="block mt-2 text-blue-500 hover:underline">
+                <p className="text-sm text-gray-600 font-serif">Population: {population}</p>
+                <p className="text-sm text-gray-600 font-serif">Region: {region}</p>
+                <p className="text-sm text-gray-600 font-serif">Capital: {capital}</p>
+                <Link
+                  to={`/countries/${name.common}`}
+                  className="block mt-2 text-blue-500 hover:underline text-sm"
+                >
                   Learn more
                 </Link>
               </div>
+
             </div>
           );
         })}
