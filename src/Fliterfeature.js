@@ -30,7 +30,7 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
   return (
     <div>
       <section className="filter">
-        <form className="form-control">
+        <form className="form-control" autoComplete='off'>
           <input
             type="search"
             name="search"
