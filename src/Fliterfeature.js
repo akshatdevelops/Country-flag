@@ -1,4 +1,6 @@
 
+
+
 import React, { useState } from 'react';
 
 const FilterFeature = ({ countryList, setFilteredCountryList }) => {
@@ -29,8 +31,8 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
 
   return (
     <div>
-      <section className="filter">
-        <form className="form-control" autoComplete='off'>
+      <section className="filter flex flex-col md:flex-row items-center justify-between">
+        <form className="form-control mb-2 md:mb-0" autoComplete='off'>
           <input
             type="search"
             name="search"
@@ -63,4 +65,4 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
   );
 };
 
-export default FilterFeature
+export default FilterFeature;
