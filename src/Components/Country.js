@@ -43,12 +43,28 @@ const Country = ()=> {
 
               <ul className="my-4 flex flex-col items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
                 <li>Capital: {item.capital[0]}</li>
-                <li>Population: {item.population.toLocaleString()}</li>
+                <li>Population: {item.population}</li>
                 <li>Region: {item.region}</li>
                 <li>Subregion: {item.subregion}</li>
               </ul>
 
-             
+              {item.borders && (
+                <>
+                  <h3 className="text-gray-900 font-bold text-lg mb-2 dark:text-white">
+                    Borders:
+                  </h3>
+                  <ul className="flex flex-wrap items-start justify-start gap-2">
+                    {item.borders.map((border, index) => (
+                      <li
+                        key={index}
+                        className="bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-800 dark:text-gray-400 text-gray-700"
+                      >
+                        {border}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
 
               <Link
                 to="/"
