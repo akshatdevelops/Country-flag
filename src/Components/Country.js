@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const Country = ()=> {
+const Country = () => {
   const [country, setCountry] = useState([]);
   const { name } = useParams();
 
@@ -46,6 +46,14 @@ const Country = ()=> {
                 <li>Population: {item.population}</li>
                 <li>Region: {item.region}</li>
                 <li>Subregion: {item.subregion}</li>
+            
+                <li>
+                  Currencies: {Object.values(item.currencies).map((currency) => currency.name).join(", ")}
+                </li>
+                
+                <li>
+                  Languages: {Object.values(item.languages).join(", ")}
+                </li>
               </ul>
 
               {item.borders && (
@@ -78,22 +86,6 @@ const Country = ()=> {
       </section>
     </>
   );
-}
+};
 
 export default Country;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
