@@ -48,9 +48,25 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
         <div>
           <Menu as="div" className="relative">
             <Menu.Button className="select bg-white rounded-lg shadow-md p-2">
-              Filter by Region
+              {selectedRegion || "Filter By Region"}⬇️
             </Menu.Button>
             <Menu.Items className="absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'Filter By Region' } })}
+                  >
+                    Filter By Region
+                  </button>
+                  
+                
+                )}
+              </Menu.Item>
+              
+              
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -61,6 +77,64 @@ const FilterFeature = ({ countryList, setFilteredCountryList }) => {
                   >
                     Asia
                   </button>
+                  
+                
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'Europe' } })}
+                  >
+                    Europe
+                  </button>
+                  
+                
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'Africa' } })}
+                  >
+                    Africa
+                  </button>
+                  
+                
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'America' } })}
+                  >
+                    America
+                  </button>
+                  
+                
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                    } group flex rounded-lg items-center w-full px-2 py-2 text-sm`}
+                    onClick={() => handleRegionFilter({ target: { value: 'Oceania' } })}
+                  >
+                    Oceania
+                  </button>
+                  
+                
                 )}
               </Menu.Item>
         
