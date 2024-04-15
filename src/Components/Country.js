@@ -42,17 +42,17 @@ const Country = () => {
               </h1>
 
               <ul className="my-4 flex flex-col items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
-                <li>Capital: {item.capital[0]}</li>
-                <li>Population: {item.population}</li>
-                <li>Region: {item.region}</li>
-                <li>Subregion: {item.subregion}</li>
+                <li><strong>Capital: </strong>{item.capital[0]}</li>
+                <li><strong>Population:</strong> {item.population}</li>
+                <li><strong>Region: </strong>{item.region}</li>
+                <li><strong>Subregion:</strong>{item.subregion}</li>
             
                 <li>
-                  Currencies: {Object.values(item.currencies).map((currency) => currency.name).join(", ")}
+                  <strong>Currencies: </strong>{Object.values(item.currencies).map((currency) => currency.name).join(", ")}
                 </li>
                 
                 <li>
-                  Languages: {Object.values(item.languages).join(", ")}
+                  <strong>Languages:</strong>{Object.values(item.languages).join(", ")}
                 </li>
               </ul>
 
