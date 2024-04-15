@@ -14,10 +14,10 @@ const CountryList = ({ countryList }) => {
               <Link to={`/countries/${name.common}`}>
               <img src={flags.svg} alt={name.common} className="w-full h-40 object-cover" />
               <div className="p-4">
-                <h4 className="text-lg font-semibold">{name.common}</h4>
-                <p className="text-sm text-gray-600 font-serif">Population: {population}</p>
-                <p className="text-sm text-gray-600 font-serif">Region: {region}</p>
-                <p className="text-sm text-gray-600 font-serif">Capital: {capital}</p>
+                <strong className="text-lg font-bold">{name.common}</strong>
+                <p className="text-sm text-black-600 font-serif">Population: {population}</p>
+                <p className="text-sm text-black-600 font-serif">Region: {region}</p>
+                <p className="text-sm text-black-600 font-serif">Capital: {capital}</p>
                 
               </div>
               </Link>

@@ -13,9 +13,9 @@ const Head = () => {
 
   return (
     <div>
-      <header className="header flex justify-between items-center px-4 py-3 bg-gray-800 text-white">
+      <header className="header flex justify-between items-center px-4 py-3 bg-white-800 text-black">
         <div>
-          <h1 className="text-2xl">Where in the world?</h1>
+          <strong className="text-2xl">Where in the world?</strong>
         </div>
 
        {/*  <div className="dark-mode-btn">
