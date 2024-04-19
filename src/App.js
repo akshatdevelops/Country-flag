@@ -7,6 +7,10 @@ import Head from './Components/Head';
 import CountryList from './Components/CountryList';
 import Country from './Components/Country';
 import Filterfeature from './Fliterfeature';
+import Parentnotes from './Components/Parentnotes';
+
+
+
 
 
 
@@ -31,13 +35,15 @@ function App() {
 
   return (
     <div className="App">
-      <Head/>
+      
       <BrowserRouter>
+      <Head/>
         <Routes>
           <Route
             path="/"
             element={
               <React.Fragment>
+                
                 <Filterfeature
                   countryList={countryList}
                   setFilteredCountryList={setFilteredCountryList}
@@ -46,7 +52,9 @@ function App() {
               </React.Fragment>
             }
           />
+          
           <Route path="/countries/:name" element={<Country/>} />
+          <Route path='/feedback' element={<Parentnotes/>}/>
         </Routes>
       </BrowserRouter>
     </div>
